@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Instagram Login</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <div class="mainContent">
+            <div class="phoneImages">
+                <img class="phonesPic" src="images/phonesOfficial.png" alt="">
+                <img id="changingImage" class="fade changingImage" src="images/image1.png" alt="">
+            </div>
+            <div class="loginColumn">
+                <div class="logoBox">
+                    <div class="logoAndText">
+                        <img class="instaLogo" src="images/instagramLogo.png" alt="">
+                        <input class="input" type="text" name="username"maxlength="75" placeholder="Phone number, username, or email">
+                        <input class="input" type="text" name="password" placeholder="Password">
+                        <button class="loginButton">Log in</button>
+                        <div class="orLine">
+                            <div class="line"></div>
+                            <p class="orText">OR</p>
+                            <div class="line"></div>
+                        </div>
+                        <a class="fbLogin" href="https://www.facebook.com/login.php?skip_api_login=1&api_key=124024574287414&kid_directed_site=0&app_id=124024574287414&signed_next=1&next=https%3A%2F%2Fwww.facebook.com%2Fdialog%2Foauth%3Fclient_id%3D124024574287414%26redirect_uri%3Dhttps%253A%252F%252Fwww.instagram.com%252Faccounts%252Fsignup%252F%26state%3D%257B%2522fbLoginKey%2522%253A%25225chppz8cwbamuchx9s1d3syhh1weh3oi18ggxty1a78zdzxxd7ap%2522%252C%2522fbLoginReturnURL%2522%253A%2522%252Ffxcal%252Fdisclosure%252F%253Fnext%253D%25252F%2522%257D%26scope%3Demail%26response_type%3Dcode%252Cgranted_scopes%26locale%3Den_US%26ret%3Dlogin%26fbapp_pres%3D0%26logger_id%3D3201475b-0a58-4ca2-844d-6673d79a02f9%26tp%3Dunspecified&cancel_url=https%3A%2F%2Fwww.instagram.com%2Faccounts%2Fsignup%2F%3Ferror%3Daccess_denied%26error_code%3D200%26error_description%3DPermissions%2Berror%26error_reason%3Duser_denied%26state%3D%257B%2522fbLoginKey%2522%253A%25225chppz8cwbamuchx9s1d3syhh1weh3oi18ggxty1a78zdzxxd7ap%2522%252C%2522fbLoginReturnURL%2522%253A%2522%252Ffxcal%252Fdisclosure%252F%253Fnext%253D%25252F%2522%257D%23_%3D_&display=page&locale=en_US&pl_dbl=0"><img class="fbIcon" src="images/fbIcon.png" alt="">Log in with Facebook</a>
+                        <a class="forgotPass" href="https://www.instagram.com/accounts/password/reset/">Forgot password?</a>
+                    </div>
+                </div>
+                <div class="signUpBox">
+                    <p class="noAccount">Don't have an account? <a class="blueLink" href="">Sign Up</a></p>
+                </div>
+                <div class="getTheApp">
+                    <p class="getText">Get the app.</p>
+                    <div class="appImages">
+                        <a href="https://play.google.com/store/apps/details?id=com.instagram.android&referrer=utm_source%3Dinstagramweb%26utm_campaign%3DloginPage%26ig_mid%3D53BEC8DF-E411-4619-8F0F-26EC6B6EB8D5%26utm_content%3Dlo%26utm_medium%3Dbadge&pli=1"><img class="google" src="images/googlePlay.png" alt=""></a>
+                        <a href="https://apps.microsoft.com/store/detail/instagram/9NBLGGH5L9XT"><img class="microsoft" src="images/microsoft.png" alt=""></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <footer>
+            <ul class="bottomLinks">
+                <li><a href="https://about.meta.com/">Meta</a></li>
+                <li><a href="https://about.instagram.com/">About</a></li>
+                <li><a href="https://about.instagram.com/blog">Blog</a></li>
+                <li><a href="https://about.instagram.com/about-us/careers">Jobs</a></li>
+                <li><a href="https://help.instagram.com/">Help</a></li>
+                <li><a href="https://developers.facebook.com/docs/instagram">API</a></li>
+                <li><a href="https://privacycenter.instagram.com/policy/?entry_point=ig_help_center_data_policy_redirect">Privacy</a></li>
+                <li><a href="https://help.instagram.com/581066165581870/">Terms</a></li>
+                <li><a href="https://www.instagram.com/directory/profiles/">Top Accounts</a></li>
+                <li><a href="https://www.instagram.com/explore/locations/">Locations</a></li>
+                <li><a href="https://www.instagram.com/web/lite/">Instagram Lite</a></li>
+                <li><a href="https://www.facebook.com/help/instagram/261704639352628">Contact Uploading & Non-Users</a></li>
+            </ul>
+            <ul class="copyright">
+                <li>
+                    <select class="languageSelect">
+                        <option value="eng">English</option>
+                    </select>
+                </li>
+                <li>&#169; 2023 Instagram from Meta</li>
+            </ul>
+        </footer>
+    <script>
+        
+        var i = 0;
+        var images = document.getElementById('changingImage');
+
+        var imageSources = [
+            "images/image1.png",
+            "images/image2.png",
+            "images/image3.png",
+            "images/image4.png"
+        ]
+        
+        function imageCarousel() {
+            i++;
+            if(i == imageSources.length){
+                i = 0;
+            }
+
+            images.src = imageSources[i]
+            setTimeout(imageCarousel, 5000);
+        }
+
+        imageCarousel();
+    </script>
+    </body>
+</html>
