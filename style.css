@@ -18,6 +18,8 @@ html, body {
     --large-font: 16px;
     --regular-font: 14px;
     --small-font: 12px;
+    --heavy: 600;
+    --light: 400;
 }
 
 .phonesPic {
@@ -132,7 +134,7 @@ html, body {
     padding: 7px 16px;
     text-align: center;
     font-size: var(--regular-font);
-    font-weight: 600;
+    font-weight: var(--heavy);
     color: var(--white);
     width: 85%;
     margin: 8px;
@@ -153,7 +155,7 @@ html, body {
 .orText {
     font-size: var(--regular-font);
     color: var(--secondary-text);
-    font-weight: 600;
+    font-weight: var(--heavy);
 }
 
 .line {
@@ -170,7 +172,7 @@ html, body {
 
 .fbLogin {
     font-size: var(--regular-font);
-    font-weight: 600;
+    font-weight: var(--heavy);
     color: var(--fb-blue);
     display: flex;
     align-items: center;
@@ -194,7 +196,7 @@ html, body {
 .blueLink {
     color: var(--blue-link);
     font-size: var(--regular-font);
-    font-weight: 600;
+    font-weight: var(--heavy);
 }
 
 .noAccount {
@@ -218,7 +220,7 @@ html, body {
     flex-direction: column;
     align-items: center;
     font-size: var(--regular-font);
-    font-weight: 400;
+    font-weight: var(--light);
     color: var(--primary-text);
     margin: -10px;
 }
