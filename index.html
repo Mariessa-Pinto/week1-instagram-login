@@ -9,7 +9,12 @@
         <div class="mainContent">
             <div class="phoneImages">
                 <img class="phonesPic" src="images/phonesOfficial.png" alt="">
-                <img id="changingImage" class="fade changingImage" src="images/image1.png" alt="">
+                <div id="changingImage">
+                    <img src="images/image1.png" alt="">
+                    <img src="images/image2.png" alt="">
+                    <img src="images/image3.png" alt="">
+                    <img src="images/image4.png" alt="">
+                </div>
             </div>
             <div class="loginColumn">
                 <div class="logoBox">
@@ -64,28 +69,37 @@
             </ul>
         </footer>
     <script>
-        
-        var i = 0;
-        var images = document.getElementById('changingImage');
+        var slide = document.getElementById("changingImage");
+        var images = Array.prototype.slice.call(slide.children);
+        var currentSlide = 1;
+        var slideLength = slide.children.length;
+        var prevSlide = 0;
 
-        var imageSources = [
-            "images/image1.png",
-            "images/image2.png",
-            "images/image3.png",
-            "images/image4.png"
-        ]
-        
-        function imageCarousel() {
-            i++;
-            if(i == imageSources.length){
-                i = 0;
-            }
+        /**
+         * @desc adds css class to images in the array with map function
+         * @param {*} img the images in the array
+         */
+        images.map(function(img) {
+            img.classList.add("carouselImg")
+        });
 
-            images.src = imageSources[i]
-            setTimeout(imageCarousel, 5000);
-        }
+        //to show the first image
+        images[0].classList.add("visible");
 
-        imageCarousel();
+        /**
+         * @desc interval function changes slide and adds/removes visibility class
+         */
+        setInterval(function(){
+            if(currentSlide >= slideLength){
+                currentSlide = 0;
+            };
+
+            images[prevSlide].classList.remove("visible");
+            images[currentSlide].classList.add("visible");
+
+            prevSlide = currentSlide;
+            currentSlide++;
+        }, 5000)
     </script>
     </body>
 </html>

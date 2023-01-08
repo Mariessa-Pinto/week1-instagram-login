@@ -28,7 +28,14 @@ html, body {
     margin-top: 43px;
 }
 
-.changingImage {
+.phoneImages {
+    position: relative;
+    display: inline;
+}
+
+/*Automated Image Carousel*/
+
+#changingImage img {
     z-index: 10;
     height: 538.84px;
     width: 250px;
@@ -37,10 +44,15 @@ html, body {
     bottom: 73px;
 }
 
-.phoneImages {
-    position: relative;
-    display: inline;
+.carouselImg {
+    opacity: 0;
+    transition: opacity 2s;
 }
+
+.visible {
+    opacity: 1;
+}
+/*End*/
 
 .mainContent {
     display: flex;
@@ -49,29 +61,6 @@ html, body {
     height: 82vh;
     align-items: center;
     margin-top: 32px;
-}
-
-/*Fading Animation*/
-
-.fade {
-    animation-name: fade;
-    animation-duration: 5s;
-    animation-iteration-count: infinite;
-}
-
-@keyframes fade {
-    0% {
-        opacity: 0%;
-    }
-    20% {
-        opacity: 100%;
-    }
-    80% {
-        opacity: 100%;
-    }
-    100% {
-        opacity: 0%;
-    }
 }
 
 
